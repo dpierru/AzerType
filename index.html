@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AzerType</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="js/config.js"></script>
+        <script src="js/script.js" defer></script>
+        <script src="js/main.js" defer></script>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header>
+            <h1>AzerType</h1>
+            <h2>L'application pour écrire plus vite !</h2>
+            <h3>AzerType est une application en ligne pour apprendre à taper plus vite au clavier :)</h3>
+        </header>
+
+        <!-- MAIN -->
+        <main> <!-- /!\ TODO : Ajouter class="popupActive" si une popup est affichée -->
+
+            <div class="zoneOptions">
+                <p>Choisissez vos options, puis commencez à taper dans le champ prévu à cet effet et le chrono démarera automatiquement.</p>
+            </div>
+
+            <div class="zoneTimer">
+                .::.
+            </div>
+
+            <div class="zoneReference">
+
+            </div>
+
+            <div class="zoneSaisie">
+                <input type="text" id="inputEcriture" name="inputEcriture">
+                <button id="btnValiderMot">Valider</button>
+            </div>
+
+            <div class="zoneResultat">
+                À combien s'élèvera votre score ? 
+            </div>
+            
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            @Copyright : Openclassroms. 
+        </footer>
+
+        <!-- POPUPS -->
+        <div class="popup popupResultat">
+            <p class="message">Vous avez tapé 5 caractères corrects en 1 minute :)</p> 
+            <button id="fermerPopup">Fermer</button>
+            <button id="afficherFormulairePopup">Partager le score</button>
+        </div>
+
+        <div class="popup popupPartage">
+            <form>
+                <input type="hidden" name="score" value="0">
+                <label for="nom">Votre nom ?</label>
+                <input type="text" name="nom" placeholder="nom">
+                <label for="email">Avec qui voulez-vous partager votre score ?</label>
+                <input type="email" name="email" placeholder="ami@domaine.com">
+                <button id="btnEnvoyerMail">Envoyer</button>
+                <button id="fermerPopupPartage">Annuler</button>
+            </form>
+        </div>
+    </body>
+</html>
