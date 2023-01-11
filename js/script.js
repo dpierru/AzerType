@@ -105,7 +105,7 @@ class Jeu {
 
     afficherResultat() {
         // Switch pour afficher le bon message en fonction de l'optionSource choisie
-        let message = `Vous avez tapé ${this.nbMotsCorrects} mot(s) correctement en 1 minute.`
+        let message = `Vous avez tapé ${this.nbMotsCorrects} mot(s) correctement en ${dureeJeu} secondes.`
     
         // Affiche le message dans la zone de résultat
         document.querySelector('.zoneResultat').innerHTML = message;
@@ -184,7 +184,7 @@ class Jeu {
         }
 
         // On ouvre un email avec les informations du formulaire pré-remplies
-        let mailto = `mailto:${email}?subject=Partage de résultat&body=Bonjour ${nom},%0D%0A%0D%0AJe t'envoie ce mail pour te partager mon résultat au jeu de l'écriture :%0D%0A%0D%0AJe suis arrivé à ${this.nbMotsCorrects} mots corrects en 1 minute.%0D%0A%0D%0ABonne journée !`;
+        let mailto = `mailto:${email}?subject=Partage de résultat&body=Bonjour ${nom},%0D%0A%0D%0AJe t'envoie ce mail pour te partager mon résultat au jeu de l'écriture :%0D%0A%0D%0AJe suis arrivé à ${this.nbMotsCorrects} mots corrects en ${dureeJeu} secondes.%0D%0A%0D%0ABonne journée !`;
         //window.open(mailto);
         window.location.href = mailto;
     }
