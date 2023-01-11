@@ -168,8 +168,8 @@ class Jeu {
         event.preventDefault();
 
         // On récupère les valeurs des champs du formulaire
-        let nom = document.querySelector('input[name="nom"]').value;
-        let email = document.querySelector('input[name="email"]').value;
+        let nom = document.querySelector('#nomPartage').value;
+        let email = document.querySelector('#emailPartage').value;
 
         // On vérifie que les champs sont bien remplis
         if (nom == '' || email == '') {

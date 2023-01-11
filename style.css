@@ -225,7 +225,6 @@ footer {
 }
 
 /* Element du formulaire dans la popup de partage */
-
 .popupPartage form {
     display: flex;
     flex-direction: column;
